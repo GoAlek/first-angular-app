@@ -3,4 +3,6 @@
   <li *ngFor="let author of authors">
     {{ author }}
   </li>
+  <input [(ngModel)]="email" (keyup.enter)="onKeyUp()" />
+  <button class="btn btn-primary" (click)="onSave()">Save</button>
 </ul>

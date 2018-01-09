@@ -8,10 +8,19 @@ import { AuthorsService } from '../authors.service';
 })
 export class AuthorsComponent implements OnInit {
 
+  email = 'me@example.com';
   authors;
 
   constructor(authorService: AuthorsService) {
     this.authors = authorService.getAuthors();
+  }
+
+  onKeyUp() {
+    console.log(this.email);
+  }
+
+  onSave() {
+    console.log(this.email);
   }
 
   ngOnInit() {
