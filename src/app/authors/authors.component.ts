@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { AuthorsService } from '../authors.service';
+import { TitleCasePipe } from '../title-case.pipe';
 
 @Component({
   selector: 'app-authors',
@@ -8,6 +9,7 @@ import { AuthorsService } from '../authors.service';
 })
 export class AuthorsComponent implements OnInit {
 
+  longText = '';
   email = 'me@example.com';
   authors;
 

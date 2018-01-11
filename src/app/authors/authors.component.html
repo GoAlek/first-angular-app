@@ -3,6 +3,12 @@
   <li *ngFor="let author of authors">
     {{ author }}
   </li>
+</ul>
+<div class="boxes">
   <input [(ngModel)]="email" (keyup.enter)="onKeyUp()" />
   <button class="btn btn-primary" (click)="onSave()">Save</button>
-</ul>
+</div>
+<div class="boxes">
+  <input [(ngModel)]="longText" type="text" />
+  <p>{{ longText | titleCase:4 }}</p>
+</div>

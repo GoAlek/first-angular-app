@@ -9,6 +9,7 @@ import { CourseComponent } from './course/course.component';
 import { CoursesService } from './courses.service';
 import { AuthorsComponent } from './authors/authors.component';
 import { AuthorsService } from './authors.service';
+import { TitleCasePipe } from './title-case.pipe';
 
 
 @NgModule({
@@ -16,7 +17,8 @@ import { AuthorsService } from './authors.service';
     AppComponent,
     CourseComponent,
     CoursesComponent,
-    AuthorsComponent
+    AuthorsComponent,
+    TitleCasePipe
   ],
   imports: [
     BrowserModule,
