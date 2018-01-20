@@ -1,6 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule } from '@angular/forms';
 import { NgModule } from '@angular/core';
+import { HttpClientModule } from '@angular/common/http';
 
 
 import { AppComponent } from './app.component';
@@ -12,6 +13,8 @@ import { AuthorsService } from './authors.service';
 import { TitleCasePipe } from './title-case.pipe';
 import { PanelComponent } from './panel/panel.component';
 import { LikeComponent } from './like/like.component';
+import { ItunesComponent } from './itunes/itunes.component';
+import { ItunesSearchService } from './itunes-search.service';
 
 
 @NgModule({
@@ -22,15 +25,18 @@ import { LikeComponent } from './like/like.component';
     AuthorsComponent,
     TitleCasePipe,
     PanelComponent,
-    LikeComponent
+    LikeComponent,
+    ItunesComponent
   ],
   imports: [
     BrowserModule,
-    FormsModule
+    FormsModule,
+    HttpClientModule,
   ],
   providers: [
     CoursesService,
-    AuthorsService
+    AuthorsService,
+    ItunesSearchService
   ],
   bootstrap: [AppComponent]
 })
