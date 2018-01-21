@@ -1,5 +1,5 @@
 import { BrowserModule } from '@angular/platform-browser';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { NgModule } from '@angular/core';
 import { HttpClientModule } from '@angular/common/http';
 
@@ -15,6 +15,7 @@ import { PanelComponent } from './panel/panel.component';
 import { LikeComponent } from './like/like.component';
 import { ItunesComponent } from './itunes/itunes.component';
 import { ItunesSearchService } from './itunes-search.service';
+import { ItunesAutoComponent } from './itunes-auto/itunes-auto.component';
 
 
 @NgModule({
@@ -26,11 +27,13 @@ import { ItunesSearchService } from './itunes-search.service';
     TitleCasePipe,
     PanelComponent,
     LikeComponent,
-    ItunesComponent
+    ItunesComponent,
+    ItunesAutoComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
+    ReactiveFormsModule,
     HttpClientModule,
   ],
   providers: [

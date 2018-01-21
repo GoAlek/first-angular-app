@@ -1,0 +1,7 @@
+  
+<form [formGroup]="searchForm">
+  <input type="search" formControlName="search" placeholder="Search">
+</form>
+<div *ngFor="let track of tracks">
+  {{ track.name }}
+</div>
