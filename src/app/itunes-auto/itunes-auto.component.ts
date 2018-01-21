@@ -10,7 +10,7 @@ import { debounceTime, switchMap } from 'rxjs/operators';
   styleUrls: ['./itunes-auto.component.css']
 })
 export class ItunesAutoComponent {
-  private tracks: ItunesItem[];
+  private tracks: ItunesItem[] = [];
   private searchForm: FormGroup;
   private searchField: FormControl;
 
@@ -23,7 +23,10 @@ export class ItunesAutoComponent {
     ).subscribe((data) => {
       this.tracks = data;
     });
+  }
 
+  selectTrack(item: ItunesItem) {
+    console.log(item.name);
   }
 
 }

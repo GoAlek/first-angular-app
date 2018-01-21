@@ -1,7 +1,12 @@
   
 <form [formGroup]="searchForm">
-  <input type="search" formControlName="search" placeholder="Search">
+  <label for="iSearch">Serch for artist</label>
+  <input id="iSearch" type="search" formControlName="search" placeholder="Search">
 </form>
-<div *ngFor="let track of tracks">
-  {{ track.name }}
+<div *ngIf="tracks.length > 0">
+  <ul *ngFor="let track of tracks">
+    <li>
+      <a (click)="selectTrack(track)">{{ track.name }}</a>
+    </li>
+  </ul>
 </div>
