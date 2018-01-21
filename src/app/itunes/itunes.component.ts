@@ -15,9 +15,9 @@ export class ItunesComponent {
 
   doSearch(term: string) {
     this.loading = true;
-    this.itunesSearch.search(term).subscribe( data => {
+    this.itunesSearch.search(term).subscribe(data => {
       this.loading = false;
-      this.result = data['results'];
+      this.result = data;
     });
   }
 
