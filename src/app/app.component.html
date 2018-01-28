@@ -1,15 +1,41 @@
-<h1>Angular</h1>
-<app-panel>
-    <ng-container class="heading">Heading</ng-container>
-    <ng-container class="body">
-        <h2>Body</h2>
-        <p>Some content here...</p>
-    </ng-container>
-</app-panel>
+<div class="flexDemoContainer">
+    <div class="container"
+        fxLayout="column"
+        fxLayoutGap="10px">
+        <div fxLayout="row">
+            <div class="item" fxLayoutAlign="center" fxFlex="100">
+                <h1>Angular</h1>
+            </div>
+        </div>
 
-<app-like
-        [likesCount]="tweet.likesCount"
-        [isActive]="tweet.isLiked"></app-like>
+        <div fxLayout="row" fxLayoutAlign="center" fxLayout.xs="column" fxLayout.sm="column">
+            <div  class="item" fxFlex="60">
+                <app-panel fxFlexFill>
+                    <ng-container class="heading">Heading</ng-container>
+                    <ng-container class="body">
+                        <h2>Body</h2>
+                        <p>Some content here...</p>
+                    </ng-container>
+                </app-panel>
+            </div>
+        </div>
 
- <app-itunes></app-itunes>
- <app-itunes-auto></app-itunes-auto>
+        <div 
+            fxLayout="row" 
+            fxLayout.xs="column" 
+            fxLayout.sm="column">
+            <div fxLayout="column" fxLayoutAlign="center" fxFlex="25%" fxHide.xs>
+                <app-like fxFlexAlign="center"
+                        [likesCount]="tweet.likesCount"
+                        [isActive]="tweet.isLiked">
+                </app-like>
+            </div>
+            <div fxLayout="column" fxLayoutAlign="center" fxFlex="50%">
+                <app-itunes fxFlexAlign="center"></app-itunes>
+            </div>
+            <div fxLayout="column" fxLayoutAlign="center" fxFlex="25%">
+                <app-itunes-auto fxFlexAlign="center"></app-itunes-auto>
+            </div>
+        </div>
+    </div>
+</div>
